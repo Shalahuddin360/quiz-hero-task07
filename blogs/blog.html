@@ -145,16 +145,35 @@
         <div class="collapse-content">
             <p>The event loop is the secret behind JavaScript’s asynchronous programming. JS executes all operations on a single thread, but using a few smart data structures, it gives us the illusion of multi-threading. For example we can say Event loop in JavaScript is a mechanism through which the 'calls waiting for execution' in the callback queue/job queue can be put on the call stack . <br>
             <strong>How does the event loop work in JavaScript?</strong>
-                <p>The event loop is a process that waits for the Call Stack to be clear before pushing callbacks from the Task Queue to the Call Stack. Once the Stack is clear, the event loop triggers and checks the Task Queue for available callbacks. If there are any, it pushes it to the Call Stack, waits for the Call Stack to be clear again, and repeats the same process</p>
+             <p>The event loop is a process that waits for the Call Stack to be clear before pushing callbacks from the Task Queue to the Call Stack. Once the Stack is clear, the event loop triggers and checks the Task Queue for available callbacks. If there are any, it pushes it to the Call Stack, waits for the Call Stack to be clear again, and repeats the same process</p>
             </p>
         </div>
     </div>
     <div tabindex="0" class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
         <div class="collapse-title text-xl font-medium">
-            4.What is a callback function and why will you use it?
+            4.What does the quizTimer() function actually work in the noChange file ?
         </div>
         <div class="collapse-content">
-            <p><b>Callback:</b>A callback function is a function passed as an argument of another function, which will
+            <p><b>quizTimer(): <span><b>1.</b></span></b>quizTimer() is basically an arrow function. This function receives a parameter called dismiss . Checking that parameter with condition. If the dismiss parameter gets a value. Returns the timer with cleanInterval .clearInterval  means The clearInterval function in javascript is used to stop the event of the recurring calling of a function at a fixed delay set by the setInterval() function.
+                </p>
+            <p><span><b>2.</b></span> On the other hand, if the value of the parameter called dismiss is not found
+            timer = setInterval
+            setInterval() tells how long to run and this method basically receives two parameters. A callback function is receiving the 1st parameter. The value of the 2nd parameter will be how long it will run.
+           </p>
+            <p><span><b>3.</b></span> The id named count from the document is selected through querySelector and the variable named countHtml is kept . <br>
+             <b>i.</b> let covtMin = Math.floor(count / 60); holds the integer in a variable called covtMin <br>
+             <b>ii.</b>let mod = count % 60; modulating the visual variable count by 60 and placing the final quotient in the variable mod. <br>
+             <b>iii.</b> we are  checking the variable named covtMin with the equation .covtMin.toString().length and if it is 1 then the value will be set dynamically with the template string or backtick. <br>
+             <b>iv.</b>In this way the value  minute, second is being set dynamically using backtick through countHtml.innerHTML. Finally, every time this function is clicked, the value of count will increase one by one, again checking with the condition. Conditionally setting values ​​using if() and else{} .
+            </p>
+        </div>
+    </div>
+    <div tabindex="0" class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
+        <div class="collapse-title text-xl font-medium">
+            4.What does the chooseQuiz() function actually work in the noChange file ?
+        </div>
+        <div class="collapse-content">
+            <p><b>quizTimer():</b>A callback function is a function passed as an argument of another function, which will
                 be executed eventually. The callback function executes inside the main function and it is up to the main
                 function to decide when to execute it</p>
             <p><b>why will you use it:</b>
