@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Tailwind CSS Components Goes Here -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <!-- CSS Framework Goes Here  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div tabindex="0" class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
+        <div class="collapse-title text-xl font-medium">
+            1. What are the differences between map, filter, forEach and find?
+        </div>
+        <div class="collapse-content">
+            <div class="overflow-x-auto">
+                <table class="table table-compact w-full">
+                    <caption> map & forEach & find & filter</caption>
+                    <!-- head -->
+                    <thead>
+                        <tr>
+                            <th>SL NO</th>
+                            <th>forEach</th>
+                            <th>map</th>
+                            <th>find</th>
+                            <th>filter</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- row 1 -->
+                        <tr>
+                            <th>1</th>
+                            <td>Return value: undefined</td>
+                            <td>Return value: newArray will be created based on your callback function</td>
+                            <td>In short, if we say about find, there will be a condition. That condition will return
+                                the element that is filled first.</td>
+                            <td> Briefly speaking about the filter method, there are conditions in this method. This is
+                                the condition that the elements fulfill. Returns those elements into an array</td>
+
+                        </tr>
+                        <!-- row 2 -->
+                        <tr>
+                            <th>2</th>
+                            <td>Original Array: not modified</td>
+                            <td>Original Array: not modified</td>
+                        </tr>
+                        <!-- row 3 -->
+                        <tr>
+                            <th>3</th>
+                            <td>newArray is not created after the end of a method call </td>
+                            <td>newArray is not created after the end of a method call </td>
+                            <!-- row 4 -->
+                        <tr>
+                            <th>4</th>
+                            <td>forEach method is not chainable </td>
+                            <td> map method is chainable </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <div tabindex="0" class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
+        <div class="collapse-title text-xl font-medium">
+            2. what is the difference between localStorage,sessionStorage and cookies ?
+        </div>
+        <div class="collapse-content">
+     
+            <h2 class="text-center">localStorage Vs sessionStorage</h2>
+            <p>localStorage and sessionStorage are relatively new APIs  and are near identical with the sole exception of persistence. sessionStorage  is only available for the duration of the browser session it does, however, survive page reloads Clearly, if the data you are storing needs to be available on an ongoing basis then localStorage is preferable to sessionStorage - although you should note both can be cleared by the user so you should not rely on the continuing existence of data in either case</p>
+            <p><span class="font-semibold">cookies:</span>  A cookie is a piece of data that a server sends in the HTTP response. The client stores the cookie and returns it on subsequent requests. This allows the client and server to share state. To set a cookie, the server includes a Set-Cookie header in the response.</p>
+            <h3 class="text-center">localStorage vs. sessionStorage vs. Cookies</h3>
+            <p>In terms of capabilities, cookies, sessionStorage, and localStorage only allow you to store strings - it is possible to implicitly convert primitive values when setting  but not Objects or Arrays . Session storage will generally allow you to store any primitives or objects supported by your Server Side language/framework.</p>
+            <div class="overflow-x-auto">
+                <table class="table table-zebra w-full">
+                    <!-- head -->
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>cookies</th>
+                            <th>localStorage</th>
+                            <th>sessionStorage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- row 1 -->
+                        <tr>
+                            <th>capacity</th>
+                            <td>4kb</td>
+                            <td>10mb </td>
+                            <td>5mb</td>
+                        </tr>
+                        <!-- row 2 -->
+                        <tr>
+                            <th>Browsers</th>
+                            <td>HTML4 /HTML 5</td>
+                            <td>HTML 5</td>
+                            <td>HTML 5</td>
+                        </tr>
+                        <!-- row 3 -->
+                        <tr>
+                            <th>Accessible form</th>
+                            <td>Any window</td>
+                            <td>Any window</td>
+                            <td>Same tab</td>
+                        </tr>
+                        <!-- row 4 -->
+                        <tr>
+                            <th>Expires</th>
+                            <td>Manually set</td>
+                            <td>Never</td>
+                            <td>On tab close</td>
+                        </tr>
+                        <!-- row 5 -->
+                        <tr>
+                            <th>Storage Location </th>
+                            <td>Browser and Server</td>
+                            <td>Browser Only</td>
+                            <td>Browser Only</td>
+                        </tr>
+                        <!-- row 6 -->
+                        <tr>
+                            <th>sent with request  </th>
+                            <td>Yes</td>
+                            <td>No</td>
+                            <td>No</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <div tabindex="0" class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
+        <div class="collapse-title text-xl font-medium">
+            3. What is event bubble?
+        </div>
+        <div class="collapse-content">
+            <p> <b>Event Bubble :</b> The "Event Bubbling" behavior makes it possible for you to handle an event in a
+                parent element instead
+                of the actual element that received the event.The pattern of handling an event on an ancestor element is
+                called Event Delegation</p>
+        </div>
+    </div>
+    <div tabindex="0" class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
+        <div class="collapse-title text-xl font-medium">
+            4.What is a callback function and why will you use it?
+        </div>
+        <div class="collapse-content">
+            <p><b>Callback:</b>A callback function is a function passed as an argument of another function, which will
+                be executed eventually. The callback function executes inside the main function and it is up to the main
+                function to decide when to execute it</p>
+            <p><b>why will you use it:</b>
+                Callbacks make sure that a function is not going to run before a task is completed but will run right
+                after the task has completed. It helps us develop asynchronous JavaScript code and keeps us safe from
+                problems and errors</p>
+        </div>
+    </div>
+</body>
+
+</html>
