@@ -14,7 +14,7 @@
     />
     <!-- Tailwind CSS Components Goes Here -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
-    <!-- CSS Framework Goes Here  -->
+    <!-- Tailwind CDN Goes Here -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -41,8 +41,8 @@
                         <!-- row 1 -->
                         <tr>
                             <th>1</th>
-                            <td>Return value: undefined</td>
-                            <td>Return value: newArray will be created based on your callback function</td>
+                            <td>The forEach() method does not returns a  new array based on the given array.</td>
+                            <td>The map() method returns an entirely new array.</td>
                             <td>The find() method is used to find all the descendant elements of the selected element.</td>
                             <td> The filter() method is used to filter all the elements</td>
 
@@ -58,8 +58,8 @@
                         <!-- row 3 -->
                         <tr>
                             <th>3</th>
-                            <td>newArray is not created after the end of a method call </td>
-                            <td>newArray is not created after the end of a method call </td>
+                            <td>The forEach() method returns “undefined“. </td>
+                            <td>The map() method returns the newly created array according to the provided callback function. </td>
                             <td>The find() method searches through all the child elements only.</td>
                             <td>The filter() method searches  through all the elements</td>
                             <!-- row 4 -->
@@ -71,14 +71,22 @@
                             <td>The filter() method does not execute the function for empty elements.</td>
 
                         </tr>
-                            <!-- row 4 -->
+                            <!-- row 5 -->
                         <tr>
                             <th>5</th>
-                            <td></td>
-                            <td> </td>
+                            <td>The forEach() method doesn’t return anything hence the method chaining technique cannot be applied here. </td>
+                            <td>With the map() method, we can chain other methods like, reduce(),sort() etc. </td>
                             <td>Its syntax is :array.find(function(value, Index, array),thisValue)</td>
                             <td>Its syntax is: array.filter(function(value, Index, array), thisValue)</td>
 
+                        </tr>
+                            <!-- row 6 -->
+                        <tr>
+                            <th>6</th>
+                            <td>It is not executed for empty elements. </td>
+                            <td>It does not change the original array.</td>
+                            <td>This method returns undefined if no elements are found.</td>
+                            <td>In filter() method a value is passed to the function as this value</td>
                         </tr>
                     </tbody>
                 </table>
