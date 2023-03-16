@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="night">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <!-- Tailwind CSS Components Goes Here -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
     <!-- CSS Framework Goes Here  -->
@@ -20,7 +26,7 @@
         <div class="collapse-content">
             <div class="overflow-x-auto">
                 <table class="table table-compact w-full">
-                    <caption> map & forEach & find & filter</caption>
+                    <caption class="center underline font-bold"> map vs forEach vs find vs filter</caption>
                     <!-- head -->
                     <thead>
                         <tr>
@@ -37,10 +43,8 @@
                             <th>1</th>
                             <td>Return value: undefined</td>
                             <td>Return value: newArray will be created based on your callback function</td>
-                            <td>In short, if we say about find, there will be a condition. That condition will return
-                                the element that is filled first.</td>
-                            <td> Briefly speaking about the filter method, there are conditions in this method. This is
-                                the condition that the elements fulfill. Returns those elements into an array</td>
+                            <td>The find() method is used to find all the descendant elements of the selected element.</td>
+                            <td> The filter() method is used to filter all the elements</td>
 
                         </tr>
                         <!-- row 2 -->
@@ -48,17 +52,32 @@
                             <th>2</th>
                             <td>Original Array: not modified</td>
                             <td>Original Array: not modified</td>
+                            <td>The find() method finds the element in the DOM tree by traversing through the root to the leaf.</td>
+                             <td>The filter() method returns the element that matches and removes the element that does not match..</td>
                         </tr>
                         <!-- row 3 -->
                         <tr>
                             <th>3</th>
                             <td>newArray is not created after the end of a method call </td>
                             <td>newArray is not created after the end of a method call </td>
+                            <td>The find() method searches through all the child elements only.</td>
+                            <td>The filter() method searches  through all the elements</td>
                             <!-- row 4 -->
                         <tr>
                             <th>4</th>
                             <td>forEach method is not chainable </td>
                             <td> map method is chainable </td>
+                            <td>It does not change the original array.</td>
+                            <td>The filter() method does not execute the function for empty elements.</td>
+
+                        </tr>
+                            <!-- row 4 -->
+                        <tr>
+                            <th>5</th>
+                            <td></td>
+                            <td> </td>
+                            <td>Its syntax is :array.find(function(value, Index, array),thisValue)</td>
+                            <td>Its syntax is: array.filter(function(value, Index, array), thisValue)</td>
 
                         </tr>
                     </tbody>
@@ -72,12 +91,24 @@
             2. what is the difference between localStorage,sessionStorage and cookies ?
         </div>
         <div class="collapse-content">
-     
-            <h2 class="text-center">localStorage Vs sessionStorage</h2>
-            <p>localStorage and sessionStorage are relatively new APIs  and are near identical with the sole exception of persistence. sessionStorage  is only available for the duration of the browser session it does, however, survive page reloads Clearly, if the data you are storing needs to be available on an ongoing basis then localStorage is preferable to sessionStorage - although you should note both can be cleared by the user so you should not rely on the continuing existence of data in either case</p>
-            <p><span class="font-semibold">cookies:</span>  A cookie is a piece of data that a server sends in the HTTP response. The client stores the cookie and returns it on subsequent requests. This allows the client and server to share state. To set a cookie, the server includes a Set-Cookie header in the response.</p>
-            <h3 class="text-center">localStorage vs. sessionStorage vs. Cookies</h3>
-            <p>In terms of capabilities, cookies, sessionStorage, and localStorage only allow you to store strings - it is possible to implicitly convert primitive values when setting  but not Objects or Arrays . Session storage will generally allow you to store any primitives or objects supported by your Server Side language/framework.</p>
+
+            <h2 class="text-center underline font-semibold">localStorage Vs sessionStorage</h2>
+            <p>localStorage and sessionStorage are relatively new APIs and are near identical with the sole exception of
+                persistence. sessionStorage is only available for the duration of the browser session it does, however,
+                survive page reloads Clearly, if the data you are storing needs to be available on an ongoing basis then
+                localStorage is preferable to sessionStorage - although you should note both can be cleared by the user
+                so you should not rely on the continuing existence of data in either case</p> <br>
+
+            <p><span class="font-semibold underline">cookies:</span> A cookie is a piece of data that a server sends in the HTTP
+                response. The client stores the cookie and returns it on subsequent requests. This allows the client and
+                server to share state. To set a cookie, the server includes a Set-Cookie header in the response.</p> <br>
+           
+                <h3 class="text-center underline font-semibold">localStorage vs. sessionStorage vs. Cookies</h3>
+
+            <p>In terms of capabilities, cookies, sessionStorage, and localStorage only allow you to store strings - it
+                is possible to implicitly convert primitive values when setting but not Objects or Arrays . Session
+                storage will generally allow you to store any primitives or objects supported by your Server Side
+                language/framework.</p>
             <div class="overflow-x-auto">
                 <table class="table table-zebra w-full">
                     <!-- head -->
@@ -127,7 +158,7 @@
                         </tr>
                         <!-- row 6 -->
                         <tr>
-                            <th>sent with request  </th>
+                            <th>sent with request </th>
                             <td>Yes</td>
                             <td>No</td>
                             <td>No</td>
@@ -140,31 +171,48 @@
     </div>
     <div tabindex="0" class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
         <div class="collapse-title text-xl font-medium">
-            3. What is an event loop ? How it works ? 
+            3. What is an event loop ? How it works ?
         </div>
         <div class="collapse-content">
-            <p>The event loop is the secret behind JavaScript’s asynchronous programming. JS executes all operations on a single thread, but using a few smart data structures, it gives us the illusion of multi-threading. For example we can say Event loop in JavaScript is a mechanism through which the 'calls waiting for execution' in the callback queue/job queue can be put on the call stack . <br>
-            <strong>How does the event loop work in JavaScript?</strong>
-             <p>The event loop is a process that waits for the Call Stack to be clear before pushing callbacks from the Task Queue to the Call Stack. Once the Stack is clear, the event loop triggers and checks the Task Queue for available callbacks. If there are any, it pushes it to the Call Stack, waits for the Call Stack to be clear again, and repeats the same process</p>
+            <p> <span><b class="underline">event loop:</b></span> The event loop is the secret behind JavaScript’s asynchronous programming. JS executes all operations on
+                a single thread, but using a few smart data structures, it gives us the illusion of multi-threading. For
+                example we can say Event loop in JavaScript is a mechanism through which the 'calls waiting for
+                execution' in the callback queue/job queue can be put on the call stack . <br>
+                <strong class="underline">How does the event loop work in JavaScript?</strong>
+            <p>The event loop is a process that waits for the Call Stack to be clear before pushing callbacks from the
+                Task Queue to the Call Stack. Once the Stack is clear, the event loop triggers and checks the Task Queue
+                for available callbacks. If there are any, it pushes it to the Call Stack, waits for the Call Stack to
+                be clear again, and repeats the same process</p>
             </p>
         </div>
     </div>
     <div tabindex="0" class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
         <div class="collapse-title text-xl font-medium">
-            4.What does the quizTimer() function actually work in the noChange file ?
+            5.What does the quizTimer() function actually work in the noChange file ?
         </div>
         <div class="collapse-content">
-            <p><b>quizTimer(): <span><b>1.</b></span></b>quizTimer() is basically an arrow function. This function receives a parameter called dismiss . Checking that parameter with condition. If the dismiss parameter gets a value. Returns the timer with cleanInterval .clearInterval  means The clearInterval function in javascript is used to stop the event of the recurring calling of a function at a fixed delay set by the setInterval() function.
-                </p>
+            <p><span><b class="underline">quizTimer()</b></span> <br>
+                <span><b>1.</b></span></b>quizTimer() is basically an arrow function. This function receives a parameter
+                called dismiss . Checking that parameter with condition. If the dismiss parameter gets a value. Returns
+                the timer with cleanInterval .clearInterval means The clearInterval function in javascript is used to
+                stop the event of the recurring calling of a function at a fixed delay set by the setInterval()
+                function.
+            </p>
             <p><span><b>2.</b></span> On the other hand, if the value of the parameter called dismiss is not found
-            timer = setInterval
-            setInterval() tells how long to run and this method basically receives two parameters. A callback function is receiving the 1st parameter. The value of the 2nd parameter will be how long it will run.
-           </p>
-            <p><span><b>3.</b></span> The id named count from the document is selected through querySelector and the variable named countHtml is kept . <br>
-             <b>i.</b> let covtMin = Math.floor(count / 60); holds the integer in a variable called covtMin <br>
-             <b>ii.</b>let mod = count % 60; modulating the visual variable count by 60 and placing the final quotient in the variable mod. <br>
-             <b>iii.</b> we are  checking the variable named covtMin with the equation .covtMin.toString().length and if it is 1 then the value will be set dynamically with the template string or backtick. <br>
-             <b>iv.</b>In this way the value  minute, second is being set dynamically using backtick through countHtml.innerHTML. Finally, every time this function is clicked, the value of count will increase one by one, again checking with the condition. Conditionally setting values ​​using if() and else{} .
+                timer = setInterval
+                setInterval() tells how long to run and this method basically receives two parameters. A callback
+                function is receiving the 1st parameter. The value of the 2nd parameter will be how long it will run.
+            </p>
+            <p><span><b>3.</b></span> The id named count from the document is selected through querySelector and the
+                variable named countHtml is kept . <br>
+                <b>i.</b> let covtMin = Math.floor(count / 60); holds the integer in a variable called covtMin <br>
+                <b>ii.</b>let mod = count % 60; modulating the visual variable count by 60 and placing the final
+                quotient in the variable mod. <br>
+                <b>iii.</b> we are checking the variable named covtMin with the equation .covtMin.toString().length and
+                if it is 1 then the value will be set dynamically with the template string or backtick. <br>
+                <b>iv.</b>In this way the value minute, second is being set dynamically using backtick through
+                countHtml.innerHTML. Finally, every time this function is clicked, the value of count will increase one
+                by one, again checking with the condition. Conditionally setting values ​​using if() and else{} .
             </p>
         </div>
     </div>
@@ -173,13 +221,36 @@
             4.What does the chooseQuiz() function actually work in the noChange file ?
         </div>
         <div class="collapse-content">
-            <p><b>quizTimer():</b>A callback function is a function passed as an argument of another function, which will
-                be executed eventually. The callback function executes inside the main function and it is up to the main
-                function to decide when to execute it</p>
-            <p><b>why will you use it:</b>
-                Callbacks make sure that a function is not going to run before a task is completed but will run right
-                after the task has completed. It helps us develop asynchronous JavaScript code and keeps us safe from
-                problems and errors</p>
+            <p> ‍<span><b class="underline">chooseQuiz()</b></span> <br>
+                <span><b>i.</b></span> chooseQuiz() is basically an arrow function. This function receives two parameters
+                named index, givenAns.The find() method is being used on the data i.e. array called answers. This method
+                basically receives a function as a parameter. Here it is seen that the find method is receiving a
+                callback function.
+            </p>
+            <p><span><b>ii.</b></span>
+                From the data named answers to the parameter named ans, data is coming one by one. That data is an
+                object. The property of the object called ans is id . if( ans.id === quizData[index].id); 
+                (quizData[index].id); // Inject the value of the index parameter into quizData and accessing the id property from that quizData[index] data
+            </p>
+            <p><span><b>iii.</b></span>
+                if (isExist) { <br>
+                    let serial = 0;  <br>
+                    for (let quiz of answers) {  <br>
+                      if (isExist.id === quiz.id) {                 <br>
+                        answers.splice(serial, 1, { ...quizData[index], givenAns });        <br>
+                        break;              <br>
+                      }                     <br>
+                      serial++;                 <br>
+                    }                               <br>
+                  } else {                         <br>
+                    answers.push({ ...quizData[index], givenAns });   <br>
+
+                  }      <br>
+                  Also checking with condition. If isExit gets the value of the parameter then it will enter the if condition. There the value of the variable called serial will get 0, running the for loop in the data called answers. Also the if(){} else condition is used in the loop.
+            </p>
+
+
+
         </div>
     </div>
 </body>
