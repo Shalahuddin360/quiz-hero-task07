@@ -140,13 +140,13 @@
     </div>
     <div tabindex="0" class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
         <div class="collapse-title text-xl font-medium">
-            3. What is event bubble?
+            3. What is an event loop ? How it works ? 
         </div>
         <div class="collapse-content">
-            <p> <b>Event Bubble :</b> The "Event Bubbling" behavior makes it possible for you to handle an event in a
-                parent element instead
-                of the actual element that received the event.The pattern of handling an event on an ancestor element is
-                called Event Delegation</p>
+            <p>The event loop is the secret behind JavaScript’s asynchronous programming. JS executes all operations on a single thread, but using a few smart data structures, it gives us the illusion of multi-threading. For example we can say Event loop in JavaScript is a mechanism through which the 'calls waiting for execution' in the callback queue/job queue can be put on the call stack . <br>
+            <strong>How does the event loop work in JavaScript?</strong>
+                <p>The event loop is a process that waits for the Call Stack to be clear before pushing callbacks from the Task Queue to the Call Stack. Once the Stack is clear, the event loop triggers and checks the Task Queue for available callbacks. If there are any, it pushes it to the Call Stack, waits for the Call Stack to be clear again, and repeats the same process</p>
+            </p>
         </div>
     </div>
     <div tabindex="0" class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
